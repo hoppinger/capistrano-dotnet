@@ -1,6 +1,6 @@
-# Capistrano::dotnet
+# capistrano::dotnet
 
-dotnet support for Capistrano 3.x
+.NET Core support for Capistrano 3.x
 
 ## Installation
 
