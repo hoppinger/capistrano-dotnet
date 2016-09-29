@@ -7,7 +7,6 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'capistrano', '~> 3.1.0'
 gem 'capistrano-dotnet'
 ```
 
@@ -27,21 +26,7 @@ Require in `Capfile` to use the default task:
 require 'capistrano/dotnet'
 ```
 
-The task will run before `deploy:updated` as part of Capistrano's default deploy,
-or can be run in isolation with `cap production dotnet:install`
-
-Configurable options:
-
-```ruby
-set :dotnet_target_path, -> { release_path.join('subdir') } # default not set
-set :dotnet_flags, '--production --silent --no-progress'    # default
-set :dotnet_roles, :all                                     # default
-set :dotnet_env_variables, {}                               # default
-```
-
-### Dependencies
-
-dotnet allows for normal `dependencies` and `devDependencies`. By default this gem uses `'--production --silent --no-progress'` as the install flags which will **only** install `dependencies` and skip `devDependencies`. If you want your `devDependencies` installed as well, then remove `--production`.
+The task will run before `deploy:updated` as part of Capistrano's default deploy.
 
 ## Contributing
 
