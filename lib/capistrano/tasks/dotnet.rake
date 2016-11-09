@@ -37,6 +37,3 @@ namespace :load do
     set :dotnet_roles, :all
   end
 end
-
-before 'deploy:updated', 'dotnet:restore'
-before 'deploy:updated', 'dotnet:publish'
